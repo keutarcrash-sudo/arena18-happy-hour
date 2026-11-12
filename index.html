@@ -32,18 +32,20 @@
   }
   .bg-image {
     position:absolute; inset:0; z-index:0;
-    background:
-      radial-gradient(ellipse 55% 45% at 20% 15%, rgba(255,255,255,.10), transparent 70%),
-      radial-gradient(ellipse 50% 40% at 82% 25%, rgba(255,255,255,.07), transparent 70%),
-      radial-gradient(ellipse 70% 55% at 50% 100%, rgba(255,255,255,.08), transparent 70%),
-      linear-gradient(160deg, #262626 0%, #141414 55%, #0a0a0a 100%);
+    background:#0d0d0d;
+  }
+  .bg-photo {
+    position:absolute; inset:0; z-index:0;
+    background-image:url('img/flechettes-bg.jpg');
+    background-size:cover; background-position:center; background-repeat:no-repeat;
+    opacity:.4;
   }
   .slide-overlay {
     position:absolute; inset:0; z-index:1;
     background: linear-gradient(180deg,
-      rgba(13,11,9,.80) 0%,
-      rgba(13,11,9,.50) 45%,
-      rgba(13,11,9,.80) 100%
+      rgba(13,11,9,.78) 0%,
+      rgba(13,11,9,.45) 45%,
+      rgba(13,11,9,.78) 100%
     );
   }
 
@@ -193,6 +195,7 @@
 <body>
 <div class="screen">
   <div class="bg-image"></div>
+  <div class="bg-photo"></div>
   <div class="slide-overlay"></div>
 
   <div class="line-top"></div>
