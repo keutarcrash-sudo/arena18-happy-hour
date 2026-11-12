@@ -48,15 +48,6 @@
     filter: blur(6px);
     opacity:.6;
   }
-  .drinks-watermark {
-    position:absolute; z-index:2; top:50%; right:clamp(6px,1.4vw,28px);
-    transform:translateY(-50%);
-    writing-mode:vertical-rl; text-orientation:mixed;
-    font-family:'Montserrat',sans-serif; font-weight:900; text-transform:uppercase;
-    font-size:clamp(34px,6vw,80px); letter-spacing:.14em; white-space:nowrap;
-    color:transparent; -webkit-text-stroke:1.5px rgba(212,168,67,.4);
-    opacity:.6; pointer-events:none;
-  }
   .slide-overlay {
     position:absolute; inset:0; z-index:1;
     background: linear-gradient(180deg,
@@ -212,7 +203,6 @@
 <body>
 <div class="screen">
   <div class="bg-image"></div>
-  <div class="drinks-watermark">Drinks</div>
   <div class="slide-overlay"></div>
 
   <div class="line-top"></div>
