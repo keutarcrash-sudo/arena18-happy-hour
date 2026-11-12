@@ -32,37 +32,7 @@
   }
   .bg-image {
     position:absolute; inset:0; z-index:0;
-    background: linear-gradient(160deg, #1a130a 0%, #0d0d0d 55%, #0a0a0a 100%);
-  }
-  .bg-photo {
-    position:absolute; inset:0; z-index:0;
-    opacity:0; overflow:hidden;
-    animation: bgfade 48s infinite;
-  }
-  .bg-photo::before, .bg-photo::after {
-    content:''; position:absolute; inset:0;
-    background-image:var(--img); background-repeat:no-repeat; background-position:center;
-  }
-  .bg-photo::before {
-    background-size:cover;
-    filter:blur(45px) brightness(.55) saturate(1.15);
-    transform:scale(1.2);
-  }
-  .bg-photo::after {
-    background-size:contain;
-  }
-  .bg-photos .bg-photo:nth-child(1) { --img:url('img/saucisson.jpg'); animation-delay:0s; }
-  .bg-photos .bg-photo:nth-child(2) { --img:url('img/bar.jpg'); animation-delay:-8s; }
-  .bg-photos .bg-photo:nth-child(3) { --img:url('img/pression.jpg'); animation-delay:-16s; }
-  .bg-photos .bg-photo:nth-child(4) { --img:url('img/corona.jpg'); animation-delay:-24s; }
-  .bg-photos .bg-photo:nth-child(5) { --img:url('img/craft.jpg'); animation-delay:-32s; }
-  .bg-photos .bg-photo:nth-child(6) { --img:url('img/soft.jpg'); animation-delay:-40s; }
-  @keyframes bgfade {
-    0%     { opacity:0; }
-    2%     { opacity:1; }
-    14.5%  { opacity:1; }
-    16.5%  { opacity:0; }
-    100%   { opacity:0; }
+    background: linear-gradient(160deg, #1c1c1c 0%, #111111 55%, #0a0a0a 100%);
   }
   .slide-overlay {
     position:absolute; inset:0; z-index:1;
@@ -219,14 +189,6 @@
 <body>
 <div class="screen">
   <div class="bg-image"></div>
-  <div class="bg-photos">
-    <div class="bg-photo"></div>
-    <div class="bg-photo"></div>
-    <div class="bg-photo"></div>
-    <div class="bg-photo"></div>
-    <div class="bg-photo"></div>
-    <div class="bg-photo"></div>
-  </div>
   <div class="slide-overlay"></div>
 
   <div class="line-top"></div>
