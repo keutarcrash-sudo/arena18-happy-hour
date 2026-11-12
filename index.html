@@ -32,21 +32,26 @@
   }
   .bg-image {
     position:absolute; inset:0; z-index:0;
-    background:
-      radial-gradient(ellipse 60% 45% at 18% 12%, rgba(212,168,67,.22), transparent 70%),
-      radial-gradient(ellipse 50% 40% at 85% 20%, rgba(12,192,223,.10), transparent 70%),
-      radial-gradient(ellipse 70% 55% at 50% 100%, rgba(212,168,67,.14), transparent 70%),
-      linear-gradient(160deg, #1a130a 0%, #0d0d0d 55%, #0a0a0a 100%);
+    background: linear-gradient(160deg, #1a130a 0%, #0d0d0d 55%, #0a0a0a 100%);
   }
-  .bg-image::before {
-    content:''; position:absolute; inset:0;
-    background-image:
-      radial-gradient(circle, rgba(240,200,102,.55) 0%, rgba(240,200,102,0) 60%);
-    background-size: 46% 46%;
-    background-position: 14% 18%;
-    background-repeat: no-repeat;
-    filter: blur(6px);
-    opacity:.6;
+  .bg-photo {
+    position:absolute; inset:0; z-index:0;
+    background-size:cover; background-repeat:no-repeat; background-position:center;
+    opacity:0;
+    animation: bgfade 48s infinite;
+  }
+  .bg-photos .bg-photo:nth-child(1) { background-image:url('img/saucisson.jpg'); animation-delay:0s; }
+  .bg-photos .bg-photo:nth-child(2) { background-image:url('img/bar.jpg'); animation-delay:-8s; }
+  .bg-photos .bg-photo:nth-child(3) { background-image:url('img/pression.jpg'); animation-delay:-16s; }
+  .bg-photos .bg-photo:nth-child(4) { background-image:url('img/corona.jpg'); animation-delay:-24s; }
+  .bg-photos .bg-photo:nth-child(5) { background-image:url('img/craft.jpg'); animation-delay:-32s; }
+  .bg-photos .bg-photo:nth-child(6) { background-image:url('img/soft.jpg'); animation-delay:-40s; }
+  @keyframes bgfade {
+    0%     { opacity:0; }
+    2%     { opacity:1; }
+    14.5%  { opacity:1; }
+    16.5%  { opacity:0; }
+    100%   { opacity:0; }
   }
   .slide-overlay {
     position:absolute; inset:0; z-index:1;
@@ -203,6 +208,14 @@
 <body>
 <div class="screen">
   <div class="bg-image"></div>
+  <div class="bg-photos">
+    <div class="bg-photo"></div>
+    <div class="bg-photo"></div>
+    <div class="bg-photo"></div>
+    <div class="bg-photo"></div>
+    <div class="bg-photo"></div>
+    <div class="bg-photo"></div>
+  </div>
   <div class="slide-overlay"></div>
 
   <div class="line-top"></div>
